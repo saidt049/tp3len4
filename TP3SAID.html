@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificar Imagen</title>
+  <style>
+    body {
+      background-color: #cce7ff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    #cajaformulario {
+      margin-bottom: 20px;
+    }
+    #cajadatos {
+      padding: 15px;
+      background: #e6f3ff;
+      border: 2px solid #99cfff;
+      border-radius: 8px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    img {
+      display: block;
+      margin-top: 8px;
+      border: 1px solid #0077cc;
+      border-radius: 4px;
+      max-width: 150px;
+      max-height: 150px;
+    }
+    button.ver {
+      margin-top: 8px;
+      background: #0077cc;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button.ver:hover {
+      background: #005fa3;
+    }
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+    .cerrar {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <section id="cajaformulario">
+    <form name="formulario">
+      <p>Archivos:<br>
+        <input type="file" name="archivos" id="archivos" multiple>
+      </p>
+    </form>
+  </section>
+
+  <section id="cajadatos">
+    No se seleccionaron archivos
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <span class="cerrar">&times;</span>
+    <img id="modalImg" src="">
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
